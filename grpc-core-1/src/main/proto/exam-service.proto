@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tr.com.medet.user;
+
+option java_multiple_files = true;
+option java_package = "tr.com.medet.user";
+
+import "google/protobuf/empty.proto";
+
+service ExamService {
+  rpc getExamName(GetExamRequest) returns (GetExamResponse){}
+
+}
+message GetExamRequest{
+  string id = 1;
+}
+
+message GetExamResponse{
+  string name = 1;
+}

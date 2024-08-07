@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package tr.com.medet.user;
+
+option java_multiple_files = true;
+option java_package = "tr.com.medet.user";
+
+import "google/protobuf/empty.proto";
+
+service UserService {
+  rpc getUser(GetUserRequest) returns (GetUserResponse){}
+}
+message GetUserRequest{
+  string id = 1;
+}
+
+message GetUserResponse{
+  string name = 1;
+}
+
+
